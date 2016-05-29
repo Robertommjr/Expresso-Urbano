@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressoUrbano.Presentation", "ExpressoUrbano.Presentation\ExpressoUrbano.Presentation.csproj", "{42D980E1-57CB-4039-AFED-A6E8F603B86F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 Presentation", "1 Presentation", "{8EBCA373-3C0E-4FE2-B0F6-641465231619}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Domain", "2 Domain", "{2EF64EFB-EDA8-4AF3-A343-5E302C3860C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Infrastructure", "3 Infrastructure", "{74A4D8C3-523C-4A7E-B6DD-CD9F90DDFCBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 Service", "4 Service", "{B477520A-D9D8-4183-8547-B085DEE74C0C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 Util", "5 Util", "{204060A3-CDDD-422C-8E42-CE7E2420CFB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressoUrbano.Domain", "ExpressoUrbano.Domain\ExpressoUrbano.Domain.csproj", "{32A960CF-A086-422B-922C-B2285B28B374}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressoUrbano.Infrastructure", "ExpressoUrbano.Infrastructure\ExpressoUrbano.Infrastructure.csproj", "{C0296F2A-AA5D-4752-8583-6E82AA7F920F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressoUrbano.Service", "ExpressoUrbano.Service\ExpressoUrbano.Service.csproj", "{055D0569-9B61-4F33-A37D-123DDAEDA5DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressoUrbano.Util", "ExpressoUrbano.Util\ExpressoUrbano.Util.csproj", "{E05A0A52-F98D-4A8E-91B3-1D5C0AFE8CE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42D980E1-57CB-4039-AFED-A6E8F603B86F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D980E1-57CB-4039-AFED-A6E8F603B86F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42D980E1-57CB-4039-AFED-A6E8F603B86F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D980E1-57CB-4039-AFED-A6E8F603B86F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32A960CF-A086-422B-922C-B2285B28B374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A960CF-A086-422B-922C-B2285B28B374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A960CF-A086-422B-922C-B2285B28B374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A960CF-A086-422B-922C-B2285B28B374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0296F2A-AA5D-4752-8583-6E82AA7F920F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0296F2A-AA5D-4752-8583-6E82AA7F920F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0296F2A-AA5D-4752-8583-6E82AA7F920F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0296F2A-AA5D-4752-8583-6E82AA7F920F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{055D0569-9B61-4F33-A37D-123DDAEDA5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{055D0569-9B61-4F33-A37D-123DDAEDA5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{055D0569-9B61-4F33-A37D-123DDAEDA5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{055D0569-9B61-4F33-A37D-123DDAEDA5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E05A0A52-F98D-4A8E-91B3-1D5C0AFE8CE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E05A0A52-F98D-4A8E-91B3-1D5C0AFE8CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E05A0A52-F98D-4A8E-91B3-1D5C0AFE8CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E05A0A52-F98D-4A8E-91B3-1D5C0AFE8CE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{42D980E1-57CB-4039-AFED-A6E8F603B86F} = {8EBCA373-3C0E-4FE2-B0F6-641465231619}
+		{32A960CF-A086-422B-922C-B2285B28B374} = {2EF64EFB-EDA8-4AF3-A343-5E302C3860C4}
+		{C0296F2A-AA5D-4752-8583-6E82AA7F920F} = {74A4D8C3-523C-4A7E-B6DD-CD9F90DDFCBB}
+		{055D0569-9B61-4F33-A37D-123DDAEDA5DC} = {B477520A-D9D8-4183-8547-B085DEE74C0C}
+		{E05A0A52-F98D-4A8E-91B3-1D5C0AFE8CE9} = {204060A3-CDDD-422C-8E42-CE7E2420CFB1}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,5 @@
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infrastructure\bin\Debug\ExpressoUrbano.Infrastructure.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infrastructure\bin\Debug\ExpressoUrbano.Infrastructure.pdb
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infrastructure\obj\Debug\ExpressoUrbano.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infrastructure\obj\Debug\ExpressoUrbano.Infrastructure.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infrastructure\obj\Debug\ExpressoUrbano.Infrastructure.pdb
