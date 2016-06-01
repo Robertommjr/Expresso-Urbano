@@ -93,4 +93,3 @@ C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano
 C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Presentation\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Presentation\obj\Debug\ExpressoUrbano.Presentation.dll
 C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Presentation\obj\Debug\ExpressoUrbano.Presentation.pdb
-C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Presentation\obj\Debug\ExpressoUrbano.Presentation.csprojResolveAssemblyReference.cache

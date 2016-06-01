@@ -1,0 +1,4 @@
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Identity\bin\Debug\ExpressoUrbano.Infra.Identity.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Identity\bin\Debug\ExpressoUrbano.Infra.Identity.pdb
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Identity\obj\Debug\ExpressoUrbano.Infra.Identity.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Identity\obj\Debug\ExpressoUrbano.Infra.Identity.pdb
