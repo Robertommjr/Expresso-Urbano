@@ -1,13 +1,13 @@
-﻿@model ExpressoUrbano.Domain.Entities.Linha
+﻿@model ExpressoUrbano.Presentation.Models.Horario.HorarioViewModel
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Cadastrar";
 }
 
-<h2>Editar Linha</h2>
+<h2>Cadastrar Horario</h2>
 
 <div class="col-md-8">
-    @using (Html.BeginForm("Editar", "Linha", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    @using (Html.BeginForm("Cadastrar", "Horario", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
     {
         @Html.AntiForgeryToken()
         @Html.Partial("_CreateOrEdit", Model)

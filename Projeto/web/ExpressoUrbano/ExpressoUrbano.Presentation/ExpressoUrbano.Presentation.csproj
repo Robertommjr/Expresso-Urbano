@@ -199,6 +199,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HorarioController.cs" />
     <Compile Include="Controllers\LinhaController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PontoController.cs" />
@@ -242,7 +243,6 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Properties\PublishProfiles\ExpressoUrbano.pubxml" />
     <None Include="Properties\PublishProfiles\RobertoJr.pubxml" />
-    <None Include="Properties\PublishProfiles\RobertoJrAzure.pubxml" />
     <None Include="Scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -321,6 +321,12 @@
     <Content Include="Views\Ponto\Cadastrar.cshtml" />
     <Content Include="Views\Ponto\Editar.cshtml" />
     <Content Include="Views\Ponto\_CreateOrEdit.cshtml" />
+    <Content Include="Views\Horario\PartialPesquisar.cshtml" />
+    <Content Include="Views\Horario\Gerenciar.cshtml" />
+    <Content Include="Views\Horario\PartialGrid.cshtml" />
+    <Content Include="Views\Horario\Editar.cshtml" />
+    <Content Include="Views\Horario\Cadastrar.cshtml" />
+    <Content Include="Views\Horario\_CreateOrEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

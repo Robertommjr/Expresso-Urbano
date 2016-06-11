@@ -1,13 +1,12 @@
-﻿@model ExpressoUrbano.Presentation.Models.Rota.RotaViewModel
-
+﻿@model ExpressoUrbano.Presentation.Models.Horario.HorarioViewModel
 @{
     ViewBag.Title = "Gerenciar";
 }
 
-<h2>Gerenciar Rotas</h2>
+<h2>Gerenciar Linhas</h2>
 
 <div class="row top-buffer">
-    <a class="btn btn-default" href="@Url.Action("Cadastrar", "Rota")" role="button">Cadastrar</a>
+    <a class="btn btn-default" href="@Url.Action("Cadastrar", "Horario")" role="button">Cadastrar</a>
 </div>
 <div class="row top-buffer">
     @Html.Partial("PartialPesquisar", Model)

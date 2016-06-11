@@ -37,5 +37,7 @@ namespace ExpressoUrbano.Presentation.Models
         public System.Data.Entity.DbSet<ExpressoUrbano.Domain.Entities.TipoHorario> TipoHorarios { get; set; }
 
         public System.Data.Entity.DbSet<ExpressoUrbano.Domain.Entities.Ponto> Pontoes { get; set; }
+
+        public System.Data.Entity.DbSet<ExpressoUrbano.Domain.Entities.Horario> Horarios { get; set; }
     }
 }
