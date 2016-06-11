@@ -1,0 +1,29 @@
+﻿@model ExpressoUrbano.Presentation.Models.TipoHorario.TipoHorarioViewModel
+
+@using (Ajax.BeginForm("Pesquisar", "TipoHorario", null, new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "Grid", OnBegin = "overlay()", OnComplete = "removeoverlay()" }, new { @id = "frmGerenciarPesquisa", @class = "form-inline", role = "form" }))
+{
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(th => th.TipoHorarioId, new { @class = "control-label" })
+            @Html.TextBoxFor(th => th.TipoHorarioId, new { @class = "form-control" })
+        </div>
+        <div class="col-md-6">
+            @Html.LabelFor(th => th.Nome, new { @class = "control-label" })
+            @Html.TextBoxFor(th => th.Nome, new { @class = "form-control" })
+        </div>
+        <div class="col-md-2">
+            @Html.LabelFor(th => th.Descricao, new { @class = "control-label" })
+            @Html.TextBoxFor(th => th.Descricao, new { @id = "DtNotificacaoPesquisa", @class = "form-control" })
+        </div>
+        <div class="col-md-3" style="float: right;">
+            <div class="form-horizontal row" style="margin-top: 27px;">
+                <input type="submit" class="btn btn-sm btn-default" value="Pesquisar" />
+                <input type="reset" class="btn btn-sm btn-default" value="Limpar" />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <br />
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+    </div>
+}

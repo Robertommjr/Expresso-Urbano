@@ -21,8 +21,7 @@ namespace ExpressoUrbano.Presentation.Controllers
         {
             return View();
         }
-
-        // POST: Notificacao/Cadastrar
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Cadastrar(LinhaViewModel linhaViewModel)
@@ -51,5 +50,24 @@ namespace ExpressoUrbano.Presentation.Controllers
             
             return PartialView("PartialGrid");
         }
+
+        [HttpGet]
+        public ActionResult Editar()
+        {
+            return View();
+        }
+        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Editar(LinhaViewModel linhaViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+
+            return View(linhaViewModel);
+        }
+
     }
 }

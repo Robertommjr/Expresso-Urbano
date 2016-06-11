@@ -201,6 +201,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LinhaController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PontoController.cs" />
+    <Compile Include="Controllers\RotaController.cs" />
+    <Compile Include="Controllers\TipoHorarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -237,7 +240,9 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Properties\PublishProfiles\ExpressoUrbano.pubxml" />
     <None Include="Properties\PublishProfiles\RobertoJr.pubxml" />
+    <None Include="Properties\PublishProfiles\RobertoJrAzure.pubxml" />
     <None Include="Scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -296,6 +301,26 @@
     <Content Include="Views\Linha\PartialGrid.cshtml" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="Views\Linha\_CreateOrEdit.cshtml" />
+    <Content Include="Views\Linha\Cadastrar.cshtml" />
+    <Content Include="Views\Linha\Editar.cshtml" />
+    <Content Include="Views\Rota\PartialGrid.cshtml" />
+    <Content Include="Views\Rota\PartialPesquisar.cshtml" />
+    <Content Include="Views\Rota\Gerenciar.cshtml" />
+    <Content Include="Views\Rota\Editar.cshtml" />
+    <Content Include="Views\Rota\Cadastrar.cshtml" />
+    <Content Include="Views\Rota\_CreateOrEdit.cshtml" />
+    <Content Include="Views\TipoHorario\Gerenciar.cshtml" />
+    <Content Include="Views\TipoHorario\PartialPesquisar.cshtml" />
+    <Content Include="Views\TipoHorario\PartialGrid.cshtml" />
+    <Content Include="Views\TipoHorario\Editar.cshtml" />
+    <Content Include="Views\TipoHorario\Cadastrar.cshtml" />
+    <Content Include="Views\TipoHorario\_CreateOrEdit.cshtml" />
+    <Content Include="Views\Ponto\Gerenciar.cshtml" />
+    <Content Include="Views\Ponto\PartialGrid.cshtml" />
+    <Content Include="Views\Ponto\PartialPesquisar.cshtml" />
+    <Content Include="Views\Ponto\Cadastrar.cshtml" />
+    <Content Include="Views\Ponto\Editar.cshtml" />
+    <Content Include="Views\Ponto\_CreateOrEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

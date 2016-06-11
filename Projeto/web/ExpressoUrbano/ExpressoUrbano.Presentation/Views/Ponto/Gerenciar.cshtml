@@ -1,0 +1,15 @@
+﻿@model ExpressoUrbano.Presentation.Models.Ponto.PontoViewModel
+    ViewBag.Title = "Gerenciar";
+}
+
+<h2>Gerenciar Rotas</h2>
+
+<div class="row top-buffer">
+    <a class="btn btn-default" href="@Url.Action("Cadastrar", "Ponto")" role="button">Cadastrar</a>
+</div>
+<div class="row top-buffer">
+    @Html.Partial("PartialPesquisar", Model)
+</div>
+<div class="row top-buffer" id="Grid">
+    @Html.Partial("PartialGrid", Model)
+</div>	

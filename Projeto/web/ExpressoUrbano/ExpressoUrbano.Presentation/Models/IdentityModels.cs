@@ -29,5 +29,13 @@ namespace ExpressoUrbano.Presentation.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<ExpressoUrbano.Domain.Entities.Linha> Linhas { get; set; }
+
+        public System.Data.Entity.DbSet<ExpressoUrbano.Domain.Entities.Rota> Rotas { get; set; }
+
+        public System.Data.Entity.DbSet<ExpressoUrbano.Domain.Entities.TipoHorario> TipoHorarios { get; set; }
+
+        public System.Data.Entity.DbSet<ExpressoUrbano.Domain.Entities.Ponto> Pontoes { get; set; }
     }
 }

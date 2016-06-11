@@ -1,0 +1,5 @@
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Domain\bin\Release\ExpressoUrbano.Domain.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Domain\bin\Release\ExpressoUrbano.Domain.pdb
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Domain\obj\Release\ExpressoUrbano.Domain.csprojResolveAssemblyReference.cache
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Domain\obj\Release\ExpressoUrbano.Domain.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Domain\obj\Release\ExpressoUrbano.Domain.pdb

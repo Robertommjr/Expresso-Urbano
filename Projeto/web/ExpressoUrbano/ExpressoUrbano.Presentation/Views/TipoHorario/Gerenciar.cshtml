@@ -1,0 +1,15 @@
+﻿@model ExpressoUrbano.Presentation.Models.TipoHorario.TipoHorarioViewModel
+    ViewBag.Title = "Gerenciar";
+}
+
+<h2>Gerenciar Tipos de Horário</h2>
+
+<div class="row top-buffer">
+    <a class="btn btn-default" href="@Url.Action("Cadastrar", "TipoHorario")" role="button">Cadastrar</a>
+</div>
+<div class="row top-buffer">
+    @Html.Partial("PartialPesquisar", Model)
+</div>
+<div class="row top-buffer" id="Grid">
+    @Html.Partial("PartialGrid", Model)
+</div>	

@@ -1,0 +1,14 @@
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Release\ExpressoUrbano.Infra.Data.dll.config
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Release\ExpressoUrbano.Infra.Data.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Release\ExpressoUrbano.Infra.Data.pdb
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Release\EntityFramework.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Release\ExpressoUrbano.Domain.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Release\MySql.Data.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Release\MySql.Data.Entity.EF6.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Release\ExpressoUrbano.Domain.pdb
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Release\EntityFramework.xml
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\obj\Release\ExpressoUrbano.Infra.Data.csprojResolveAssemblyReference.cache
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\obj\Release\ExpressoUrbano.Infra.Data.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\obj\Release\ExpressoUrbano.Infra.Data.pdb
