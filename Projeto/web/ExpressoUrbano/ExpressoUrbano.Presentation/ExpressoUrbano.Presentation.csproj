@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <ApplicationInsightsResourceId>/subscriptions/70dab82e-0589-43a5-ab0b-abbee7e1c5bc/resourcegroups/TCCI/providers/microsoft.insights/components/ExpressoUrbano</ApplicationInsightsResourceId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -198,13 +199,19 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LinhaController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Horario\HorarioViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Linha\LinhaViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Ponto\PontoViewModel.cs" />
+    <Compile Include="Models\Rota\RotaViewModel.cs" />
+    <Compile Include="Models\TipoHorario\TipoHorarioViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -282,6 +289,13 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\jquery-2.2.3.min.map" />
+    <Content Include="Views\Shared\PartialMenuTop.cshtml" />
+    <Content Include="Views\Shared\PartialRodape.cshtml" />
+    <Content Include="Views\Linha\Gerenciar.cshtml" />
+    <Content Include="Views\Linha\PartialPesquisar.cshtml" />
+    <Content Include="Views\Linha\PartialGrid.cshtml" />
+    <Content Include="Service References\Application Insights\ConnectedService.json" />
+    <Content Include="Views\Linha\_CreateOrEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -289,6 +303,19 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExpressoUrbano.Domain\ExpressoUrbano.Domain.csproj">
+      <Project>{32a960cf-a086-422b-922c-b2285b28b374}</Project>
+      <Name>ExpressoUrbano.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExpressoUrbano.Service\ExpressoUrbano.Service.csproj">
+      <Project>{055d0569-9b61-4f33-a37d-123ddaeda5dc}</Project>
+      <Name>ExpressoUrbano.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

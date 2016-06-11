@@ -41,6 +41,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\HorarioService.cs" />
+    <Compile Include="Services\LinhaService.cs" />
+    <Compile Include="Services\PontoService.cs" />
+    <Compile Include="Services\RotaService.cs" />
+    <Compile Include="Services\TipoHorarioService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExpressoUrbano.Domain\ExpressoUrbano.Domain.csproj">
+      <Project>{32a960cf-a086-422b-922c-b2285b28b374}</Project>
+      <Name>ExpressoUrbano.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExpressoUrbano.Infra.Data\ExpressoUrbano.Infra.Data.csproj">
+      <Project>{1fd08994-c54c-4f74-b11d-d3913fdae50f}</Project>
+      <Name>ExpressoUrbano.Infra.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

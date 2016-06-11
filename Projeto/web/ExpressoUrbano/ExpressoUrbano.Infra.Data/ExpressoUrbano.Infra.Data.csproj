@@ -52,7 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\ExpressoUrbanoContext.cs" />
+    <Compile Include="EntityConfig\HorarioConfig.cs" />
+    <Compile Include="EntityConfig\LinhaConfig.cs" />
+    <Compile Include="EntityConfig\PontoConfig.cs" />
     <Compile Include="EntityConfig\RotaConfig.cs" />
+    <Compile Include="EntityConfig\TipoHorarioConfig.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IRepositoryBase.cs" />

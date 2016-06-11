@@ -37,7 +37,11 @@ namespace ExpressoUrbano.Infra.Data.Context
             modelBuilder.Properties<string>().Configure(properties => properties.HasColumnType("varchar"));
             modelBuilder.Properties<string>().Configure(properties => properties.HasMaxLength(250));
 
+            modelBuilder.Configurations.Add(new HorarioConfig());
+            modelBuilder.Configurations.Add(new LinhaConfig());
+            modelBuilder.Configurations.Add(new PontoConfig());
             modelBuilder.Configurations.Add(new RotaConfig());
+            modelBuilder.Configurations.Add(new TipoHorarioConfig());
         }
 
         public override int SaveChanges()

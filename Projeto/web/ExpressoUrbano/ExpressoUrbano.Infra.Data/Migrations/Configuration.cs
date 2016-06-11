@@ -1,18 +1,23 @@
+using MySql.Data.Entity;
 using ExpressoUrbano.Infra.Data.Context;
-using System.Data.Entity.Migrations;
 
 namespace ExpressoUrbano.Infra.Data.Migrations
 {
+    using System.Data.Entity.Migrations;
+    
     internal sealed class Configuration : DbMigrationsConfiguration<ExpressoUrbanoContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            //AutomaticMigrationDataLossAllowed = true;
+            SetSqlGenerator("MySql.Data.MySqlClient", new MySqlMigrationSqlGenerator());
+            CodeGenerator = new MySqlMigrationCodeGenerator();
         }
 
         protected override void Seed(ExpressoUrbanoContext context)
         {
-            
+
         }
     }
 }

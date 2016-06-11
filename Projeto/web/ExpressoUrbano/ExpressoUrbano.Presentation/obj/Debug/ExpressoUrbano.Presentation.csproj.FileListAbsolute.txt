@@ -93,3 +93,12 @@ C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano
 C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Presentation\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Presentation\obj\Debug\ExpressoUrbano.Presentation.dll
 C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Presentation\obj\Debug\ExpressoUrbano.Presentation.pdb
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Presentation\obj\Debug\ExpressoUrbano.Presentation.csprojResolveAssemblyReference.cache
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Presentation\bin\ExpressoUrbano.Domain.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Presentation\bin\ExpressoUrbano.Service.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Presentation\bin\ExpressoUrbano.Infra.Data.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Presentation\bin\MySql.Data.Entity.EF6.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Presentation\bin\MySql.Data.dll
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Presentation\bin\ExpressoUrbano.Domain.pdb
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Presentation\bin\ExpressoUrbano.Service.pdb
+C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Presentation\bin\ExpressoUrbano.Infra.Data.pdb

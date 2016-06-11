@@ -11,5 +11,7 @@ namespace ExpressoUrbano.Domain.Entities
         public int TipoHorarioId { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
+
+        public virtual ICollection<Horario> Horarios { get; set; }
     }
 }
