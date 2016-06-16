@@ -14,10 +14,5 @@ namespace ExpressoUrbano.Infra.Data.Migrations
             SetSqlGenerator("MySql.Data.MySqlClient", new MySqlMigrationSqlGenerator());
             CodeGenerator = new MySqlMigrationCodeGenerator();
         }
-
-        protected override void Seed(ExpressoUrbanoContext context)
-        {
-
-        }
     }
 }

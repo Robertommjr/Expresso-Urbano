@@ -12,6 +12,10 @@ namespace ExpressoUrbano.Domain.Entities
         public string Nome { get; set; }
         public string Cor { get; set; }
 
+        public DateTime DtRegistro { get; set; }
+        public DateTime DtModificacao { get; set; }
+        public bool Status { get; set; }
+
         public virtual ICollection<Linha> Linhas { get; set; }
         public virtual ICollection<Ponto> Pontos { get; set; }
     }

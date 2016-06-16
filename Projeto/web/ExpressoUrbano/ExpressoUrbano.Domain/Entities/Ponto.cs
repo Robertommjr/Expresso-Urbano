@@ -14,6 +14,10 @@ namespace ExpressoUrbano.Domain.Entities
         public double Latitude { get; set; }
         public double Longitude { get; set; }
 
+        public DateTime DtRegistro { get; set; }
+        public DateTime DtModificacao { get; set; }
+        public bool Status { get; set; }
+
         public virtual Rota Rota { get; set; }
     }
 }

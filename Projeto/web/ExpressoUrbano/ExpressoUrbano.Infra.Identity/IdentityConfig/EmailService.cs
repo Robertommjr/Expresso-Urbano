@@ -21,28 +21,28 @@ namespace ExpressoUrbano.Infra.Identity.IdentityConfig
         // Implementação do SendGrid
         private Task ConfigSendGridasync(IdentityMessage message)
         {
-            var myMessage = new SendGridMessage();
-            myMessage.AddTo(message.Destination);
-            myMessage.From = new MailAddress("admin@portal.com.br", "Admin do Portal");
-            myMessage.Subject = message.Subject;
-            myMessage.Text = message.Body;
-            myMessage.Html = message.Body;
+        //    var myMessage = new SendGridAPIClient();
+        //    myMessage.AddTo(message.Destination);
+        //    myMessage.From = new MailAddress("admin@portal.com.br", "Admin do Portal");
+        //    myMessage.Subject = message.Subject;
+        //    myMessage.Text = message.Body;
+        //    myMessage.Html = message.Body;
 
-            var credentials = new NetworkCredential(ConfigurationManager.AppSettings["mailAccount"], ConfigurationManager.AppSettings["mailPassword"]);
+        //    var credentials = new NetworkCredential(ConfigurationManager.AppSettings["mailAccount"], ConfigurationManager.AppSettings["mailPassword"]);
 
-            // Criar um transport web para envio de e-mail
-            var transportWeb = new Web(credentials);
+        //    // Criar um transport web para envio de e-mail
+        //    var transportWeb = new Web(credentials);
 
-            // Enviar o e-mail
-            if (transportWeb != null)
-            {
-                var x = transportWeb.DeliverAsync(myMessage);
-                return x;
-            }
-            else
-            {
-                return Task.FromResult(0);
-            }
+        //    // Enviar o e-mail
+        //    if (transportWeb != null)
+        //    {
+        //        var x = transportWeb.DeliverAsync(myMessage);
+        //        return x;
+        //    }
+        //    else
+        //    {
+        //        return Task.FromResult(0);
+        //    }
         }
 
         // Implementação de e-mail manual
