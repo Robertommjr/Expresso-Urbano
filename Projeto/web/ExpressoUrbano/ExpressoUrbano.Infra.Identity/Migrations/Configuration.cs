@@ -25,7 +25,7 @@ namespace ExpressoUrbano.Infra.Identity.Migrations
             {
                 var userStore = new UserStore<ApplicationUser>(context);
                 var userManager = new UserManager<ApplicationUser>(userStore);
-                var userToInsert = new ApplicationUser { UserName = "administrador", Email = "robertomartins.m.jr@gmail.com" };
+                var userToInsert = new ApplicationUser { UserName = "administrador"};
                 userManager.Create(userToInsert, "tcc@123");
             }
         }

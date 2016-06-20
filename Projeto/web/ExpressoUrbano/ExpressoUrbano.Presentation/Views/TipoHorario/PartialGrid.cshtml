@@ -1,10 +1,58 @@
-﻿<div class="table-responsive">
-    <table class="table table-bordered table-hover">
-        <tr>
-            <th>Cod.</th>
-            <th>Itinerário</th>
-            <th>Tarifa</th>
-            <th></th>
-        </tr>
-    </table>
-</div>
+﻿@using ExpressoUrbano.Presentation.Models.TipoHorario
+@model TipoHorarioViewModel
+@{
+    if (Model != null && Model.Horarios.Count > 0)
+    {
+        var grid = new WebGrid(Model.Horarios,
+            rowsPerPage: 20,
+            defaultSort: "TipoHorarioId",
+            ajaxUpdateContainerId: "gridView",
+            ajaxUpdateCallback: "ajaxWebGrid",
+            canPage: true);
+
+        if (Request.QueryString[grid.SortDirectionFieldName].IsEmpty())
+        {
+            grid.SortDirection = SortDirection.Ascending;
+        }
+        else if (grid.SortDirection == SortDirection.Ascending)
+        {
+            grid.SortDirection = SortDirection.Ascending;
+        }
+        else
+        {
+            grid.SortDirection = SortDirection.Descending;
+        }
+
+        @grid.GetHtml(
+            htmlAttributes: new { id = "gridView" },
+            tableStyle: "table table-striped table-bordered table-hover",
+            headerStyle: "table-header-grid",
+            footerStyle: "dataTables_wrapper",
+            rowStyle: "sorting",
+            alternatingRowStyle: "table-linha-grid",
+            mode: WebGridPagerModes.All,
+            lastText: "»",
+            firstText: "«",
+            nextText: "›",
+            previousText: "‹",
+            columns: grid.Columns(
+                grid.Column("TipoHorarioId", "Código", canSort: true, style: "col-md-1"),
+                grid.Column("Nome", "Nome", canSort: true, style: "col-md-4"),
+                grid.Column("Descricao", "Descricao", canSort: true, style: "col-md-4"),
+                grid.Column("Status", "Status", canSort: true, style: "col-md-2", format: item => item.Status ? "Ativo" : "Inativo"),
+                grid.Column(style: "action-buttons center col-sm-1", format: item =>
+                    new HtmlString(
+                        Html.Raw(" <a class='green' data-toggle='tooltip'  title='Editar' href='" + Url.Action("Editar", new { @id = item.TipoHorarioId }) + "'><i class='ace-icon fa fa-pencil bigger-130'></i></a>").ToString() +
+                        Html.Raw(" <a class='blue' data-toggle='tooltip'  title='Visualizar' href='" + Url.Action("Visualizar", new { @id = item.TipoHorarioId }) + "'><i class='ace-icon fa fa-search-plus bigger-130'></i></a>").ToString() +
+                        Html.Raw(" <a id='" + @item.TipoHorarioId + "' name='" + @item.Nome + "' class='red' data-toggle='tooltip' " + "title='Excluir' href='#' onclick='clickExcluir(this);'><i class='ace-icon fa fa-trash-o bigger-130' href='" + Url.Action("Excluir", new { @id = item.TipoHorarioId }) + "'></i></a>").ToString()
+                        )
+                    ))
+            )
+    }
+    else
+    {
+        <div class="alert alert-warning">
+            @Html.Raw(@Resources.grid_vazia)
+        </div>
+    }
+}

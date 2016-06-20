@@ -2,8 +2,9 @@
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
-using ExpressoUrbano.Infra.Data.Migrations;
+
 using ExpressoUrbano.Infra.Data.EntityConfig;
+using ExpressoUrbano.Infra.Data.Migrations;
 using MySql.Data.Entity;
 
 namespace ExpressoUrbano.Infra.Data.Context
@@ -15,10 +16,10 @@ namespace ExpressoUrbano.Infra.Data.Context
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ExpressoUrbanoContext, Configuration>());
         }
 
-        static ExpressoUrbanoContext()
-        {
-            DbConfiguration.SetConfiguration(new MySqlEFConfiguration());
-        }
+        //static ExpressoUrbanoContext()
+        //{
+        //    DbConfiguration.SetConfiguration(new MySqlEFConfiguration());
+        //}
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

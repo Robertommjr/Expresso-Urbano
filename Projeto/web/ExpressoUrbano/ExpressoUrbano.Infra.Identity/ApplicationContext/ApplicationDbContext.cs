@@ -9,7 +9,7 @@ namespace ExpressoUrbano.Infra.Identity.ApplicationContext
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-                : base("ConnDB", throwIfV1Schema: false)
+                : base("ConnDB")
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
         }

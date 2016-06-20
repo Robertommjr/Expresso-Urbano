@@ -353,7 +353,7 @@
       <Name>ExpressoUrbano.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\ExpressoUrbano.Infra.Data\ExpressoUrbano.Infra.Data.csproj">
-      <Project>{1FD08994-C54C-4F74-B11D-D3913FDAE50F}</Project>
+      <Project>{1fd08994-c54c-4f74-b11d-d3913fdae50f}</Project>
       <Name>ExpressoUrbano.Infra.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\ExpressoUrbano.Service\ExpressoUrbano.Service.csproj">

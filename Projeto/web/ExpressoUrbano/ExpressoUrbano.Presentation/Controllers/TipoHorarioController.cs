@@ -17,8 +17,11 @@ namespace ExpressoUrbano.Presentation.Controllers
         [HttpGet]
         public ActionResult Gerenciar()
         {
+            var tipoHorarioVM = new TipoHorarioViewModel();
 
-            return View();
+            tipoHorarioVM.Horarios = Mapper.Map<IList<TipoHorario>, ICollection<TipoHorarioViewModel>>(_tipoHorarioService.ObterTodos());
+
+            return View(tipoHorarioVM);
         }
 
         [HttpGet]
@@ -33,12 +36,12 @@ namespace ExpressoUrbano.Presentation.Controllers
         {
             if (ModelState.IsValid)
             {
-                //var tipoHorario = Mapper.Map<TipoHorarioViewModel, TipoHorario>(tipoHorarioViewModel);
+                var tipoHorario = Mapper.Map<TipoHorarioViewModel, TipoHorario>(tipoHorarioViewModel);
 
-                //_tipoHorarioService.Salvar(tipoHorario);
-                //TempData["Message"] = new[] { Resources.cadastro_sucesso, "sucesso" };
+                _tipoHorarioService.Salvar(tipoHorario);
+                TempData["Message"] = new[] { Resources.cadastro_sucesso, "sucesso" };
 
-                //return RedirectToAction("Gerenciar", "TipoHorario");
+                return RedirectToAction("Gerenciar", "TipoHorario");
             }
 
             return View(tipoHorarioViewModel);

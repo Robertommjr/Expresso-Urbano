@@ -19,8 +19,8 @@ namespace ExpressoUrbano.Infra.Identity.IdentityConfig
         }
 
         // Implementação do SendGrid
-        private Task ConfigSendGridasync(IdentityMessage message)
-        {
+        //private Task ConfigSendGridasync(IdentityMessage message)
+        //{
         //    var myMessage = new SendGridAPIClient();
         //    myMessage.AddTo(message.Destination);
         //    myMessage.From = new MailAddress("admin@portal.com.br", "Admin do Portal");
@@ -43,7 +43,7 @@ namespace ExpressoUrbano.Infra.Identity.IdentityConfig
         //    {
         //        return Task.FromResult(0);
         //    }
-        }
+        //}
 
         // Implementação de e-mail manual
         private Task SendMail(IdentityMessage message)

@@ -15,8 +15,8 @@ namespace ExpressoUrbano.Domain.Entities
         public double Tarifa { get; set; }
         public string Descricao { get; set; }
 
-        public DateTime DtRegistro { get; set; }
-        public DateTime DtModificacao { get; set; }
+        public DateTime? DtRegistro { get; set; }
+        public DateTime? DtModificacao { get; set; }
         public bool Status { get; set; }
 
         public virtual Rota Rota { get; set; }
