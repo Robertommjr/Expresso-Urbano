@@ -1,0 +1,159 @@
+﻿@model ExpressoUrbano.Presentation.Areas.Admin.ViewModels.Linha.LinhaViewModel
+@{
+    ViewBag.Title = "Gerenciar";
+}
+
+@Styles.Render("~/Content/ui-grid-custom.css")
+
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Gerenciar", "Linha")">Linhas</a></li>
+    <li class="active">@ViewBag.Title</li>
+</ol>
+
+<div class="col-md-12">
+    <a href="@Url.Action("Cadastrar", "Linha")" class="btn btn-primary waves-effect z-depth-5" style="margin: 0 10px 10px 0; float: left; text-transform: uppercase;">Cadastrar</a>
+    <a href="#" id="btn-desativar" class="btn btn-danger waves-effect z-depth-3" style="float: right; text-transform: uppercase;">Desativar</a>
+    <a href="#" id="btn-visualizar" class="btn btn-success waves-effect z-depth-3" style="margin: 0 10px 10px 0; float: right; text-transform: uppercase;">Visualizar</a>
+    <a href="#" id="btn-editar" class="btn btn-warning waves-effect z-depth-3" style="margin: 0 10px 10px 0; float: right; text-transform: uppercase;">Editar</a>
+
+</div>
+
+<div class="col-md-12">
+    <div ui-i18n="{{lang}}" ng-controller="LinhaGrid">
+        <div id="grd-resultado" class="z-depth-3" ui-grid="gridLinha" ng-init="ObterLista()" ui-grid-auto-resize ui-grid-resize-columns ui-grid-selection ui-grid-pagination ui-grid-move-columns></div>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        var idLinha;
+
+        app.controller('LinhaGrid', [
+            '$scope', 'i18nService', '$http', 'uiGridConstants', function ($scope, i18nService, $http, uiGridConstants) {
+                i18nService.setCurrentLang('pt-BR');
+                $scope.langs = i18nService.getAllLangs();
+                $scope.lang = 'pt-BR';
+
+                $scope.ObterLista = function () {
+                    $http.get('@Url.Action("Listar")').then(function successCallback(data) {
+                        $scope.loadData = data.data;
+                    });
+                };
+
+                var statusCellTemplate = '<div class="ui-grid-cell-contents ng-binding ng-scope">' +
+                    '<div ng-if="!row.entity.Status">Inativo</div>' +
+                    '<div ng-if="row.entity.Status">Ativo</div>' +
+                    '</div>';
+
+                $scope.gridLinha = {
+                    paginationPageSizes: [25, 50, 75, 100],
+                    paginationPageSize: 25,
+                    showGridFooter: false,
+                    enableColumnResizing: true,
+                    enableGridMenu: true,
+                    enableSorting: true,
+                    enableFiltering: true,
+                    enableRowSelection: true,
+                    multiSelect: false,
+                    enableRowHeaderSelection: false,
+                    enableHorizontalScrollbar: 0,
+                    enableVerticalScrollbar: 0,
+                    noUnselect: true,
+                    data: 'loadData',
+                    columnDefs: [
+                        { name: 'Código', field: 'LinhaId', width: '10%', cellClass: 'alinha_direita', filter: { placeholder: 'Pesquisar' } },
+                        { name: 'Identificador', field: 'Identificador', width: '20%', filter: { placeholder: 'Pesquisar' } },
+                        { name: 'Itinerario', field: 'Itinerario', width: '20%', filter: { placeholder: 'Pesquisar' } },
+                        { name: 'Tarifa', field: 'Tarifa', width: '20%', filter: { placeholder: 'Pesquisar' } },
+                        { name: 'Descricao', field: 'Descricao', width: '10%', filter: { placeholder: 'Pesquisar' } },
+                        { name: 'Status', field: 'Status', cellTemplate: statusCellTemplate, filter: { term: true, selectOptions: [{ value: null, label: 'Todos' }, { value: true, label: 'Ativo' }, { value: false, label: 'Inativo' }], type: uiGridConstants.filter.SELECT } }
+                    ],
+                    onRegisterApi: function (gridApi) {
+                        $scope.gridApi = gridApi;
+
+                        gridApi.selection.on.rowSelectionChanged($scope, function (row) {
+                            if (gridApi.selection.getSelectedRows().length > 0) {
+                                linhaId = gridApi.selection.getSelectedRows()[0].LinhaId;
+                                linhaDados = gridApi.selection.getSelectedRows()[0];
+                            }
+                            else
+                                linhaId = 0;
+                        });
+                    },
+                    appScopeProvider: {
+                        onDblClick: function (row) {
+                            $("#btn-visualizar").click();
+                        }
+                    },
+                    rowTemplate: "<div ng-dblclick=\"grid.appScope.onDblClick(row)\" ng-repeat=\"(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name\" class=\"ui-grid-cell\" ng-class=\"{ 'ui-grid-row-header-cell': col.isRowHeader }\" ui-grid-cell></div>"
+                }
+
+                $scope.filter = function () {
+                    $scope.gridApi.grid.refresh();
+                };
+            }
+        ]);
+
+        $("#btn-visualizar").click(function () {
+            if (linhaId == null || linhaId == 0) {
+                $("#modal_erroSelecao").modal("show");
+                if ($("#modal_erroSelecao").click(function () {
+                    $("#modal_erroSelecao").modal("hide");
+                }));
+                return false;
+            }
+            else {
+                var url = '@Url.Action("Visualizar", "Linha", new { id = "__id__" })';
+                window.location.href = url.replace('__id__', linhaId);
+            }
+        });
+
+        $("#btn-desativar").click(function () {
+            if (linhaId == null || linhaId == 0) {
+                //alert('Um perfil deve ser selecionado.');
+                $("#modal_erroSelecao").modal("show");
+                if ($("#modal_erroSelecao").click(function () {
+                    $("#modal_erroSelecao").modal("hide");
+                }));
+                return false;
+            }
+            else if (!linhaDados.Status) {
+                //titulo,                  texto,                tipo,          ShowBtnCancel,      txtConfirmButtonText,       txtCancelButtonText,    closeAndCancel,     closeAndConfirm,    comConfirmacao,     TipoAcaoConfirm,    txtAcaoConfirm,     TipoAcaoCancel,     txtAcaoCancel       funcaoAcao
+                //txt,                     txt,                  txt,           bool,               txt,                        txt,                    bool,               bool,               bool,               txt                 txt                 txt                 txt
+                callNotification("Atenção!", "A linha já está desativada!", "warning", false, "OK", "", false, false, false, "", "", "", "", null);
+            }
+            else {
+                var funcaoAcao = function () {
+                    $.ajax({
+                        type: "POST",
+                        url: "@Url.Action("Desativar", "Linha")",
+                        dataType: 'html',
+                        data: { Id: linhaId },
+                        success: function (data) {
+                            onSuccess(data);
+                            angular.element($('#grd-resultado')[0]).scope().ObterLista();
+                        },
+                        error: function (data) {
+                            alert("Erro");
+                        }
+                    });
+                };
+                callNotification("Confirmar desativação!", "Este item será desativado.", "warning", true, "OK", "Cancelar", false, false, true, "Desativado!", "A linha foi desativada.", "Cancelado!", "A linha não foi desativada.", funcaoAcao);
+            }
+        });
+
+        $("#btn-editar").click(function () {
+            if (linhaId == null || linhaId == 0) {
+                // alert('Um perfil deve ser selecionado.');
+                $("#modal_erroSelecao").modal("show");
+                if ($("#modal_erroSelecao").click(function () {
+                    $("#modal_erroSelecao").modal("hide");
+                }));
+                return false;
+            } else {
+                var url = '@Url.Action("Editar", "Linha", new {id = "__id__"})';
+                window.location.href = url.replace('__id__', linhaId);
+            }
+        });
+    </script>
+}

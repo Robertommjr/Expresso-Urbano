@@ -2,3 +2,7 @@ C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano
 C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Util\bin\Debug\ExpressoUrbano.Util.pdb
 C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Util\obj\Debug\ExpressoUrbano.Util.dll
 C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Util\obj\Debug\ExpressoUrbano.Util.pdb
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Util\bin\Debug\ExpressoUrbano.Util.dll
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Util\bin\Debug\ExpressoUrbano.Util.pdb
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Util\obj\Debug\ExpressoUrbano.Util.dll
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Util\obj\Debug\ExpressoUrbano.Util.pdb

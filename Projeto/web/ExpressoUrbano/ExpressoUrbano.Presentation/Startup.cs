@@ -1,7 +1,9 @@
-﻿using Microsoft.Owin;
+﻿using ExpressoUrbano.Presentation;
+using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(ExpressoUrbano.Presentation.Startup))]
+[assembly: OwinStartup(typeof (Startup))]
+
 namespace ExpressoUrbano.Presentation
 {
     public partial class Startup

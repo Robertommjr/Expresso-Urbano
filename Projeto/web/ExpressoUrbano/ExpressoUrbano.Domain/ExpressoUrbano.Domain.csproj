@@ -45,6 +45,8 @@
     <Compile Include="Entities\Ponto.cs" />
     <Compile Include="Entities\Rota.cs" />
     <Compile Include="Entities\TipoHorario.cs" />
+    <Compile Include="Enums\EnumExtensions.cs" />
+    <Compile Include="Enums\EnumStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

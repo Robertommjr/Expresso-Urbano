@@ -11,3 +11,16 @@ C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano
 C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Service\obj\Debug\ExpressoUrbano.Service.csprojResolveAssemblyReference.cache
 C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Service\obj\Debug\ExpressoUrbano.Service.dll
 C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Service\obj\Debug\ExpressoUrbano.Service.pdb
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Service\bin\Debug\ExpressoUrbano.Service.dll
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Service\bin\Debug\ExpressoUrbano.Service.pdb
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Service\bin\Debug\ExpressoUrbano.Domain.dll
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Service\bin\Debug\ExpressoUrbano.Infra.Data.dll
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Service\bin\Debug\EntityFramework.dll
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Service\bin\Debug\MySql.Data.Entity.EF6.dll
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Service\bin\Debug\MySql.Data.dll
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Service\bin\Debug\ExpressoUrbano.Domain.pdb
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Service\bin\Debug\ExpressoUrbano.Infra.Data.pdb
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Service\bin\Debug\EntityFramework.xml
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Service\obj\Debug\ExpressoUrbano.Service.csprojResolveAssemblyReference.cache
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Service\obj\Debug\ExpressoUrbano.Service.dll
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Service\obj\Debug\ExpressoUrbano.Service.pdb

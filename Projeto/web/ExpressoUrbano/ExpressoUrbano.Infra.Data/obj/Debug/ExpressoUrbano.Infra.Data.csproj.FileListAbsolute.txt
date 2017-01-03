@@ -12,3 +12,17 @@ C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano
 C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\obj\Debug\ExpressoUrbano.Infra.Data.csprojResolveAssemblyReference.cache
 C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\obj\Debug\ExpressoUrbano.Infra.Data.dll
 C:\Users\rober\Google Drive\CEFET\201417060417\5º Período\TCCI\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\obj\Debug\ExpressoUrbano.Infra.Data.pdb
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Debug\ExpressoUrbano.Infra.Data.dll.config
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Debug\ExpressoUrbano.Infra.Data.dll
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Debug\ExpressoUrbano.Infra.Data.pdb
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Debug\EntityFramework.dll
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Debug\ExpressoUrbano.Domain.dll
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Debug\MySql.Data.dll
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Debug\ExpressoUrbano.Domain.pdb
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Debug\EntityFramework.xml
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\obj\Debug\ExpressoUrbano.Infra.Data.csprojResolveAssemblyReference.cache
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\obj\Debug\ExpressoUrbano.Infra.Data.dll
+R:\Projetos\CEFET\Expresso-Urbano\Projeto\web\ExpressoUrbano\ExpressoUrbano.Infra.Data\obj\Debug\ExpressoUrbano.Infra.Data.pdb

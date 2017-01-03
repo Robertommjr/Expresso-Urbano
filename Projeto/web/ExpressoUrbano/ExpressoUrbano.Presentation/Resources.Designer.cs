@@ -72,45 +72,63 @@ namespace ExpressoUrbano.Presentation {
         /// <summary>
         ///   Looks up a localized string similar to Dados alterado com sucesso!.
         /// </summary>
-        public static string altera_sucesso {
+        public static string alterar_sucesso {
             get {
-                return ResourceManager.GetString("altera_sucesso", resourceCulture);
+                return ResourceManager.GetString("alterar_sucesso", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Erro ao cadastrar!.
         /// </summary>
-        public static string cadastro_erro {
+        public static string cadastrar_erro {
             get {
-                return ResourceManager.GetString("cadastro_erro", resourceCulture);
+                return ResourceManager.GetString("cadastrar_erro", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Cadastro realizado com sucesso!.
         /// </summary>
-        public static string cadastro_sucesso {
+        public static string cadastrar_sucesso {
             get {
-                return ResourceManager.GetString("cadastro_sucesso", resourceCulture);
+                return ResourceManager.GetString("cadastrar_sucesso", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Erro ao desativar.
+        /// </summary>
+        public static string desativar_erro {
+            get {
+                return ResourceManager.GetString("desativar_erro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registro desativado com sucesso.
+        /// </summary>
+        public static string desativar_sucesso {
+            get {
+                return ResourceManager.GetString("desativar_sucesso", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Erro ao editar!.
         /// </summary>
-        public static string edicao_erro {
+        public static string editar_erro {
             get {
-                return ResourceManager.GetString("edicao_erro", resourceCulture);
+                return ResourceManager.GetString("editar_erro", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Edição realizada com sucesso!.
         /// </summary>
-        public static string edicao_sucesso {
+        public static string editar_sucesso {
             get {
-                return ResourceManager.GetString("edicao_sucesso", resourceCulture);
+                return ResourceManager.GetString("editar_sucesso", resourceCulture);
             }
         }
         
@@ -135,18 +153,18 @@ namespace ExpressoUrbano.Presentation {
         /// <summary>
         ///   Looks up a localized string similar to Erro ao excluir!.
         /// </summary>
-        public static string exclusao_erro {
+        public static string excluir_erro {
             get {
-                return ResourceManager.GetString("exclusao_erro", resourceCulture);
+                return ResourceManager.GetString("excluir_erro", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Exclusão realizada com sucesso!.
         /// </summary>
-        public static string exclusao_sucesso {
+        public static string excluir_sucesso {
             get {
-                return ResourceManager.GetString("exclusao_sucesso", resourceCulture);
+                return ResourceManager.GetString("excluir_sucesso", resourceCulture);
             }
         }
         

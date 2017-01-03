@@ -1,0 +1,79 @@
+﻿@model ExpressoUrbano.Presentation.Areas.User.ViewModels.Index.IndexViewModel
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+<div class="col-md-12">
+    <div class="col-sm-3">
+        <div class="mini-charts-item" style="background-color: #0073CF;">
+            <div class="clearfix">
+                <div class="count" style="float: left;">
+                    <i class="zmdi zmdi-chart zmdi-hc-3x" style="color: white;"></i>
+                </div>
+                <div class="count" style="float: right;">
+                    <small>Demandas abertas</small>
+                    <h2>987,459</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="mini-charts-item" style="background-color: #69BE28;">
+            <div class="clearfix">
+                <div class="count" style="float: left;">
+                    <i class="zmdi zmdi-chart zmdi-hc-3x" style="color: white;"></i>
+                </div>
+                <div class="count" style="float: right;">
+                    <small>Demandas atendidas</small>
+                    <h2>458,778</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="mini-charts-item" style="background-color: #CD202C;">
+            <div class="clearfix">
+                <div class="count" style="float: left;">
+                    <i class="zmdi zmdi-chart zmdi-hc-3x" style="color: white;"></i>
+                </div>
+                <div class="count" style="float: right;">
+                    <small>Usuários ativos</small>
+                    <h2>356,785</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="mini-charts-item" style="background-color: #ECC200;">
+            <div class="clearfix">
+                <div class="count" style="float: left;">
+                    <i class="zmdi zmdi-chart zmdi-hc-3x" style="color: white;"></i>
+                </div>
+                <div class="count" style="float: right;">
+                    <small>Instituições ativas</small>
+                    <h2>458,778</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-6">
+    <div id="usuario"></div>
+    <div class="col-md-12">
+        <div class="card">
+            <div id="piechart_3d" style="height: auto;"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-6">
+    <div id="demanda"></div>
+    <div class="col-md-12">
+        <div class="card">
+            <div id="chart_div" style="height: auto;"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+label .red{
+    color: red;
+}
+
+.espaco{
+    margin: 0px 10px 10px 10px;
+}
+
+.progress2 {
+    height: 20px;
+    border-radius: 5;
+}

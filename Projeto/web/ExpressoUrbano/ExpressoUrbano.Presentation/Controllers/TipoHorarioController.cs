@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using AutoMapper;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
+using AutoMapper;
 using ExpressoUrbano.Domain.Entities;
 using ExpressoUrbano.Presentation.Models.TipoHorario;
 using ExpressoUrbano.Service.Services;
@@ -12,14 +9,15 @@ namespace ExpressoUrbano.Presentation.Controllers
 {
     public class TipoHorarioController : Controller
     {
-        readonly TipoHorarioService _tipoHorarioService = new TipoHorarioService();
+        private readonly TipoHorarioService _tipoHorarioService = new TipoHorarioService();
 
         [HttpGet]
         public ActionResult Gerenciar()
         {
             var tipoHorarioVM = new TipoHorarioViewModel();
 
-            tipoHorarioVM.Horarios = Mapper.Map<IList<TipoHorario>, ICollection<TipoHorarioViewModel>>(_tipoHorarioService.ObterTodos());
+            tipoHorarioVM.Horarios =
+                Mapper.Map<IList<TipoHorario>, ICollection<TipoHorarioViewModel>>(_tipoHorarioService.ObterTodos());
 
             return View(tipoHorarioVM);
         }
@@ -39,7 +37,7 @@ namespace ExpressoUrbano.Presentation.Controllers
                 var tipoHorario = Mapper.Map<TipoHorarioViewModel, TipoHorario>(tipoHorarioViewModel);
 
                 _tipoHorarioService.Salvar(tipoHorario);
-                TempData["Message"] = new[] { Resources.cadastro_sucesso, "sucesso" };
+                TempData["Message"] = new[] {Resources.cadastrar_sucesso, "sucesso"};
 
                 return RedirectToAction("Gerenciar", "TipoHorario");
             }
@@ -58,7 +56,6 @@ namespace ExpressoUrbano.Presentation.Controllers
         {
             if (ModelState.IsValid)
             {
-
             }
 
             return PartialView("PartialGrid");
@@ -76,11 +73,9 @@ namespace ExpressoUrbano.Presentation.Controllers
         {
             if (ModelState.IsValid)
             {
-
             }
 
             return View(tipoHorarioViewModel);
         }
-
     }
 }

@@ -120,19 +120,25 @@
   <data name="acesso_negado" xml:space="preserve">
     <value>Acesso negado!</value>
   </data>
-  <data name="altera_sucesso" xml:space="preserve">
+  <data name="alterar_sucesso" xml:space="preserve">
     <value>Dados alterado com sucesso!</value>
   </data>
-  <data name="cadastro_erro" xml:space="preserve">
+  <data name="cadastrar_erro" xml:space="preserve">
     <value>Erro ao cadastrar!</value>
   </data>
-  <data name="cadastro_sucesso" xml:space="preserve">
+  <data name="cadastrar_sucesso" xml:space="preserve">
     <value>Cadastro realizado com sucesso!</value>
   </data>
-  <data name="edicao_erro" xml:space="preserve">
+  <data name="desativar_erro" xml:space="preserve">
+    <value>Erro ao desativar</value>
+  </data>
+  <data name="desativar_sucesso" xml:space="preserve">
+    <value>Registro desativado com sucesso</value>
+  </data>
+  <data name="editar_erro" xml:space="preserve">
     <value>Erro ao editar!</value>
   </data>
-  <data name="edicao_sucesso" xml:space="preserve">
+  <data name="editar_sucesso" xml:space="preserve">
     <value>Edição realizada com sucesso!</value>
   </data>
   <data name="email_erro" xml:space="preserve">
@@ -141,10 +147,10 @@
   <data name="email_sucesso" xml:space="preserve">
     <value>Email enviado com sucesso!</value>
   </data>
-  <data name="exclusao_erro" xml:space="preserve">
+  <data name="excluir_erro" xml:space="preserve">
     <value>Erro ao excluir!</value>
   </data>
-  <data name="exclusao_sucesso" xml:space="preserve">
+  <data name="excluir_sucesso" xml:space="preserve">
     <value>Exclusão realizada com sucesso!</value>
   </data>
   <data name="grid_vazia" xml:space="preserve">

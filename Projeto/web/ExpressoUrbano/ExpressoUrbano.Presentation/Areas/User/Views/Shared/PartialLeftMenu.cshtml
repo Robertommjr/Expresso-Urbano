@@ -1,0 +1,49 @@
+﻿<aside id="sidebar" class="sidebar c-overflow">
+    <div class="profile-menu">
+        <a href="#">
+            <div class="profile-pic">
+                <img src="https://s3.amazonaws.com/whisperinvest-images/default.png" alt="">
+            </div>
+
+            <div class="profile-info">
+                NOME
+                <i class="zmdi zmdi-caret-down"></i>
+            </div>
+        </a>
+
+        <ul class="main-menu">
+            <li>
+                Editar Perfil
+            </li>
+            <li>
+                <a href="@Url.Action("AlteraSenha", "Account")"><i class="zmdi zmdi-account"></i> Alterar Senha</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Login", "Account")" id="LogoutId" onclick=" LogoutClick('@Url.Action("Logout", "Account")') "><i class="zmdi zmdi-time-restore"></i> Sair</a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="main-menu">
+        <li class="sub-menu">
+            <a href="#"><i class="zmdi zmdi-layers"></i>Gerenciar</a>
+            <ul>
+                <li>
+                    <a href="@Url.Action("Gerenciar", "Competencia")">Competência</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Gerenciar", "Demanda")">Demanda</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Gerenciar", "InstituicaoSocial")">Instituição</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Gerenciar", "Periodicidade")">Periodicidade</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Gerenciar", "Voluntario")">Voluntário</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</aside>

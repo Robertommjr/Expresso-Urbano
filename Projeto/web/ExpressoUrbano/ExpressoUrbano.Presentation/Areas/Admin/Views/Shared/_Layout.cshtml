@@ -1,297 +1,279 @@
-﻿@*
-    Cores do padrão APERAM
-    Roxo #6B1F7C
-    Laranja #E05206
-    Rosa #D28AC8
-    Cinza Escuro #616365
-    Cinza Claro #C7C2B9
-    Amarelo #ECC200
-    Verde #69BE28
-    Azul #0073CF
-    Vermelho #CD202C
-*@
-
-
-
-@using System.Web.Mvc.Html
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html ng-app="app">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <meta name="format-detection" content="telephone=no">
     <meta charset="UTF-8">
-    <title>Gestão de Voluntários</title>
-    <link rel="shortcut icon" href="~/Content/img/favicon.ico" type="image/x-icon" />
+    <title>Expresso Urbano</title>
+    <link rel="shortcut icon" href="~/Content/img/favicon.ico" type="image/x-icon"/>
     @Styles.Render("~/Content/cssTemplate")
     @Styles.Render("~/Content/uicss")
     @Scripts.Render("~/bundles/bower")
 </head>
 <body>
-    <header id="header" class="clearfix" data-current-skin="blue">
-        <div class="header-inner">
-            <div style="float: left;">
-                <a href="#" id="tw-switch"><i class="zmdi zmdi-menu zmdi-hc-3x" style="color: white;"></i></a>
-            </div>
-            <div id="logo hidden-xs" style="width: 151.181102362px; height: 100%; float: right;">
-                <a href="@Url.Action("Index", "Index")">
-                    <img id="logo" src="~/Content/img/logo_aperam_branca.png" style="width: 100%; float: right;" />
-                </a>
-            </div>
-            <div style="text-align: center;">
-                <h4 style="color: white;">GESTÃO DE VOLUNTÁRIOS</h4>
-            </div>
+<header id="header" class="clearfix" data-current-skin="blue">
+    <div class="header-inner">
+        <div style="float: left;">
+            <a href="#" id="tw-switch">
+                <i class="zmdi zmdi-menu zmdi-hc-3x" style="color: white;"></i>
+            </a>
         </div>
-    </header>
+        <div id="logo hidden-xs" style="float: right; height: 100%; width: 151.181102362px;">
+            <a href="@Url.Action("Index", "Index")">
+                <img id="logo" src="~/Content/img/logo_aperam_branca.png" style="float: right; width: 100%;"/>
+            </a>
+        </div>
+        <div style="text-align: center;">
+            <h4 style="color: white;">PAINEL DE CONTROLE</h4>
+        </div>
+    </div>
+</header>
 
 
-    <section id="main">
-        @Html.Partial("PartialLeftMenu")
-        <section id="content">
-            <div id="container" class="col-md-12" style="padding-left: 0; top: -20px;">
-                @RenderBody()
-            </div>
-        </section>
+<section id="main">
+    @Html.Partial("PartialLeftMenu")
+    <section id="content">
+        <div id="container" class="col-md-12" style="padding-left: 0; top: -20px;">
+            @RenderBody()
+        </div>
     </section>
+</section>
 
-    <!-- Page Loader -->
-    <div class="page-loader" id="modalCarregando" aria-hidden="true">
-        <div class="preloader pls-blue">
-            <svg class="pl-circular" viewBox="25 25 50 50">
-                <circle class="plc-path" cx="50" cy="50" r="20" />
-            </svg>
-        </div>
+<!-- Page Loader -->
+<div class="page-loader" id="modalCarregando" aria-hidden="true">
+    <div class="preloader pls-blue">
+        <svg class="pl-circular" viewBox="25 25 50 50">
+            <circle class="plc-path" cx="50" cy="50" r="20"/>
+        </svg>
     </div>
+</div>
 
-    <div class="modal fade" id="modal_excluir" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true" align="center">
-        <div class="modal-dialog">
-            <div class="modal-content" style="width: 300px;">
-                <div class="modal-header" align="center">
-                    <h4 class="modal-title">Confirmar desativação!</h4>
-                </div>
-                <div class="modal-body" align="center">
-                    <p>Este item será desativado.</p>
-                </div>
-                <div class="modal-footer">
-                    <button id="modal_deletar_confirma" type="button" class="btn btn-danger">Desativar</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                </div>
+<div class="modal fade" id="modal_excluir" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true" align="center">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width: 300px;">
+            <div class="modal-header" align="center">
+                <h4 class="modal-title">Confirmar desativação!</h4>
+            </div>
+            <div class="modal-body" align="center">
+                <p>Este item será desativado.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal_deletar_confirma" type="button" class="btn btn-danger">Desativar</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="modal fade" id="modal_erroCep" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true" align="center">
-        <div class="modal-dialog">
-            <div class="modal-content" style="width: 300px;">
-                <div class="modal-header" align="center">
-                    <h4 class="modal-title">O CEP está incorreto</h4>
-                </div>
-                <div class="modal-body" align="center">
-                    <p>O CEP informado não foi encontrado.</p>
-                </div>
-                <div class="modal-footer">
-                    <button id="modal_btn_warning" type="button" class="btn btn-primary">Continuar</button>
-                </div>
+<div class="modal fade" id="modal_erroCep" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true" align="center">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width: 300px;">
+            <div class="modal-header" align="center">
+                <h4 class="modal-title">O CEP está incorreto</h4>
+            </div>
+            <div class="modal-body" align="center">
+                <p>O CEP informado não foi encontrado.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal_btn_warning" type="button" class="btn btn-primary">Continuar</button>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="modal fade" id="modal_erroSelecao" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true" align="center">
-        <div class="modal-dialog">
-            <div class="modal-content" style="width: 300px;">
-                <div class="modal-header" align="center">
-                    <h4 class="modal-title">Selecione um item</h4>
-                </div>
-                <div class="modal-body" align="center">
-                    <p>Nenhum item foi selecionado! Para efetuar uma operação você deve selecionar um item abaixo.</p>
-                </div>
-                <div class="modal-footer">
-                    <button id="modal_btn_warning" type="button" class="btn btn-primary">Continuar</button>
-                </div>
+<div class="modal fade" id="modal_erroSelecao" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true" align="center">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width: 300px;">
+            <div class="modal-header" align="center">
+                <h4 class="modal-title">Selecione um item</h4>
+            </div>
+            <div class="modal-body" align="center">
+                <p>Nenhum item foi selecionado! Para efetuar uma operação você deve selecionar um item abaixo.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal_btn_warning" type="button" class="btn btn-primary">Continuar</button>
             </div>
         </div>
     </div>
+</div>
 
-    @*Modal chamado na remoção e edição de voluntario, voluntarios com R3 não podem ser editados e/ou removidos.*@
+@*Modal chamado na remoção e edição de voluntario, voluntarios com R3 não podem ser editados e/ou removidos.*@
 
-    @Scripts.Render("~/bundles/jsTemplate")
-    @Scripts.Render("~/bundles/angular")
-    @RenderSection("scripts", required: false)
+@Scripts.Render("~/bundles/jsTemplate")
+@Scripts.Render("~/bundles/angular")
+@RenderSection("scripts", false)
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("input").on('change',
-
-            function () {
-                $("input.input-validation-error").parent().parent().addClass("has-error")
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("input").on("change",
+            function() {
+                $("input.input-validation-error").parent().parent().addClass("has-error");
             });
+    });
+</script>
+<script type="text/javascript">
+
+    function notify(from, align, icon, type, animIn, animOut, msg) {
+        $.growl({
+            icon: icon,
+            title: "",
+            message: msg,
+            url: ""
+        }, {
+            element: "body",
+            type: type,
+            allow_dismiss: true,
+            placement: {
+                from: from,
+                align: align
+            },
+            offset: {
+                x: 20,
+                y: 75
+            },
+            spacing: 10,
+            z_index: 1031,
+            delay: 2500,
+            timer: 1000,
+            url_target: "_blank",
+            mouse_over: false,
+            animate: {
+                enter: animIn,
+                exit: animOut
+            },
+            icon_type: "class",
+            template: "<div data-growl=\"container\" class=\"alert\" role=\"alert\">" +
+                "<button type=\"button\" class=\"close\" data-growl=\"dismiss\">" +
+                "<span aria-hidden=\"true\">&times;</span>" +
+                "<span class=\"sr-only\">Close</span>" +
+                "</button>" +
+                "<span data-growl=\"icon\"></span>" +
+                "<span data-growl=\"title\"></span>" +
+                "<span data-growl=\"message\"></span>" +
+                "<a href=\"#\" data-growl=\"url\"></a>" +
+                "</div>"
         });
-    </script>
-    <script type="text/javascript">
+    };
 
-        function notify(from, align, icon, type, animIn, animOut, msg) {
-            $.growl({
-                icon: icon,
-                title: "",
-                message: msg,
-                url: ''
-            }, {
-                element: 'body',
-                type: type,
-                allow_dismiss: true,
-                placement: {
-                    from: from,
-                    align: align
-                },
-                offset: {
-                    x: 20,
-                    y: 75
-                },
-                spacing: 10,
-                z_index: 1031,
-                delay: 2500,
-                timer: 1000,
-                url_target: '_blank',
-                mouse_over: false,
-                animate: {
-                    enter: animIn,
-                    exit: animOut
-                },
-                icon_type: 'class',
-                template: '<div data-growl="container" class="alert" role="alert">' +
-                                '<button type="button" class="close" data-growl="dismiss">' +
-                                    '<span aria-hidden="true">&times;</span>' +
-                                    '<span class="sr-only">Close</span>' +
-                                '</button>' +
-                                '<span data-growl="icon"></span>' +
-                                '<span data-growl="title"></span>' +
-                                '<span data-growl="message"></span>' +
-                                '<a href="#" data-growl="url"></a>' +
-                            '</div>'
-            });
-        };
+    $(".notifications > div > .btn").click(function(e) {
+        e.preventDefault();
+        var nFrom = $(this).attr("data-from");
+        var nAlign = $(this).attr("data-align");
+        var nIcons = $(this).attr("data-icon");
+        var nType = $(this).attr("data-type");
+        var nAnimIn = $(this).attr("data-animation-in");
+        var nAnimOut = $(this).attr("data-animation-out");
 
-        $('.notifications > div > .btn').click(function (e) {
-            e.preventDefault();
-            var nFrom = $(this).attr('data-from');
-            var nAlign = $(this).attr('data-align');
-            var nIcons = $(this).attr('data-icon');
-            var nType = $(this).attr('data-type');
-            var nAnimIn = $(this).attr('data-animation-in');
-            var nAnimOut = $(this).attr('data-animation-out');
+        notify(nFrom, nAlign, nIcons, nType, nAnimIn, nAnimOut);
+    });
 
-            notify(nFrom, nAlign, nIcons, nType, nAnimIn, nAnimOut);
-        });
+    //txt,    txt,   txt,     bool,             txt,               txt,                    bool,           bool       bool            txt              txt                txt             txts        function
+    function callNotification(titulo, texto, tipo, ShowBtnCancel, txtConfirmButtonText, txtCancelButtonText, closeAndCancel, closeAndConfirm, comConfirmacao, TipoAcaoConfirm, txtAcaoConfirm, TipoAcaoCancel, txtAcaoCancel, functionAcao) {
 
-        //txt,    txt,   txt,     bool,             txt,               txt,                    bool,           bool       bool            txt              txt                txt             txts        function
-        function callNotification(titulo, texto, tipo, ShowBtnCancel, txtConfirmButtonText, txtCancelButtonText, closeAndCancel, closeAndConfirm, comConfirmacao, TipoAcaoConfirm, txtAcaoConfirm, TipoAcaoCancel, txtAcaoCancel, functionAcao) {
+        var aux = null;
 
-            var aux = null;
+        if (comConfirmacao)
+            aux = function(isConfirm) {
+                if (isConfirm) {
+                    swal(TipoAcaoConfirm, txtAcaoConfirm, "success");
+                    functionAcao();
+                } else
+                    swal(TipoAcaoCancel, txtAcaoCancel, "error");
+            };
+        swal({
+            title: titulo,
+            text: texto,
+            type: tipo,
+            showCancelButton: ShowBtnCancel,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: txtConfirmButtonText,
+            cancelButtonText: txtCancelButtonText,
+            closeOnConfirm: closeAndConfirm,
+            closeOnCancel: closeAndCancel
+        }, aux);
+    }
 
-            if (comConfirmacao)
-                aux = function (isConfirm) {
-                    if (isConfirm) {
-                        swal(TipoAcaoConfirm, txtAcaoConfirm, "success");
-                        functionAcao();
-                    } else
-                        swal(TipoAcaoCancel, txtAcaoCancel, "error");
-                }
 
-            swal({
-                title: titulo,
-                text: texto,
-                type: tipo,
-                showCancelButton: ShowBtnCancel,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: txtConfirmButtonText,
-                cancelButtonText: txtCancelButtonText,
-                closeOnConfirm: closeAndConfirm,
-                closeOnCancel: closeAndCancel
-            }, aux);
+    $(document).ready(function() {
+
+        if (document.body.className == "") {
+            document.body.className = "sw-toggled";
         }
 
-
-
-        $(document).ready(function () {
-
-            if (document.body.className == '') {
-                document.body.className = 'sw-toggled'
+        $("#tw-switch").click(function() {
+            if (document.body.className == "sw-toggled") {
+                document.body.className = "";
+            } else {
+                document.body.className = "sw-toggled";
             }
-
-            $('#tw-switch').click(function () {
-                if (document.body.className == 'sw-toggled') {
-                    document.body.className = '';
-                }
-                else {
-                    document.body.className = 'sw-toggled';
-                }
-            });
-
-
-            $(function () {
-                $(".datepicker").datepicker({ dateFormat: "dd/MM/yyyy" });
-            });
-
-            /* Input Masking - you can include your own way */
-            (function () {
-                $('.mask-date').mask('00/00/0000');
-                $('.mask-referencia').mask('00/0000');
-                $('.mask-time').mask('00:00:00');
-                $('.mask-date_time').mask('00/00/0000 00:00:00');
-                $('.mask-cep').mask('00.000-000');
-                $('.mask-phone').mask('0000-0000');
-                $('.mask-phone_with_ddd').mask('(00) 0000-0000');
-                $('.mask-cel_with_ddd').mask('(00) 00000-0000');
-                $('.mask-phone_us').mask('(000) 000-0000');
-                $('.mask-mixed').mask('AAA 000-S0S');
-                $('.mask-cpf').mask('000.000.000-00', { reverse: true });
-                $('.mask-ie').mask('000.000.000/0000', { reverse: true });
-                $('.mask-cnpj').mask('00.000.000/0000-00', { reverse: true });
-                $('.mask-money').mask('000000000000000,00', { reverse: true });
-                $('.mask-money2').mask("#.##0,00", { reverse: true, maxlength: false });
-                $('.mask-ip_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', { translation: { 'Z': { pattern: /[0-9]/, optional: true } } });
-                $('.mask-ip_address').mask('099.099.099.099');
-                $('.mask-percent').mask('##0,00%', { reverse: true });
-                $('.mask-credit_card').mask('0000 0000 0000 0000');
-                $(".mask-numeric").on("keyup", function () {
-                    $("#" + this.id).val($("#" + this.id).val().replace(/[^0-9]/g, ''));
-                });
-                //$('.mask-socio-codigo').mask('000000000-0', { reverse: true });
-                $('.mask-subconta').mask('000000000.00', { reverse: true });
-                $('.mask-agencia').mask('0000', { reverse: true });
-                $('.mask-agencia2').mask('0000-A', { reverse: true });
-            })();
-
-            $('.jQ-Data').prop('readonly', true);
-            $(".jQ-Data").datepicker({
-                minDate: new Date(1900, 10 - 1, 25),
-                maxDate: '+100Y',
-                dateFormat: 'dd/mm/yy',
-                dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'],
-                dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
-                dayNamesShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
-                monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-                monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-                changeMonth: true,
-                changeYear: true,
-                yearRange: "1900:+100",
-                defaultDate: 0
-            });
-            $(".jQ-Data").attr('minlength', 10);
-            $(".jQ-Data").attr('maxlength', 10);
-
         });
 
-        function LogoutClick(url) {
-            $.ajax({
-                type: "POST",
-                url: url,
-                dataType: 'html'
-            });
-        }
 
-        @if (TempData["Message"] != null)
-        {
-        string[] values = (string[])TempData["Message"];
+        $(function() {
+            $(".datepicker").datepicker({ dateFormat: "dd/MM/yyyy" });
+        });
+
+        /* Input Masking - you can include your own way */
+        (function() {
+            $(".mask-date").mask("00/00/0000");
+            $(".mask-referencia").mask("00/0000");
+            $(".mask-time").mask("00:00:00");
+            $(".mask-date_time").mask("00/00/0000 00:00:00");
+            $(".mask-cep").mask("00.000-000");
+            $(".mask-phone").mask("0000-0000");
+            $(".mask-phone_with_ddd").mask("(00) 0000-0000");
+            $(".mask-cel_with_ddd").mask("(00) 00000-0000");
+            $(".mask-phone_us").mask("(000) 000-0000");
+            $(".mask-mixed").mask("AAA 000-S0S");
+            $(".mask-cpf").mask("000.000.000-00", { reverse: true });
+            $(".mask-ie").mask("000.000.000/0000", { reverse: true });
+            $(".mask-cnpj").mask("00.000.000/0000-00", { reverse: true });
+            $(".mask-money").mask("000000000000000,00", { reverse: true });
+            $(".mask-money2").mask("#.##0,00", { reverse: true, maxlength: false });
+            $(".mask-ip_address").mask("0ZZ.0ZZ.0ZZ.0ZZ", { translation: { 'Z': { pattern: /[0-9]/, optional: true } } });
+            $(".mask-ip_address").mask("099.099.099.099");
+            $(".mask-percent").mask("##0,00%", { reverse: true });
+            $(".mask-credit_card").mask("0000 0000 0000 0000");
+            $(".mask-numeric").on("keyup", function() {
+                $("#" + this.id).val($("#" + this.id).val().replace(/[^0-9]/g, ""));
+            });
+            //$('.mask-socio-codigo').mask('000000000-0', { reverse: true });
+            $(".mask-subconta").mask("000000000.00", { reverse: true });
+            $(".mask-agencia").mask("0000", { reverse: true });
+            $(".mask-agencia2").mask("0000-A", { reverse: true });
+        })();
+
+        $(".jQ-Data").prop("readonly", true);
+        $(".jQ-Data").datepicker({
+            minDate: new Date(1900, 10 - 1, 25),
+            maxDate: "+100Y",
+            dateFormat: "dd/mm/yy",
+            dayNames: ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"],
+            dayNamesMin: ["D", "S", "T", "Q", "Q", "S", "S", "D"],
+            dayNamesShort: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom"],
+            monthNames: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+            monthNamesShort: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "1900:+100",
+            defaultDate: 0
+        });
+        $(".jQ-Data").attr("minlength", 10);
+        $(".jQ-Data").attr("maxlength", 10);
+
+    });
+
+    function LogoutClick(url) {
+        $.ajax({
+            type: "POST",
+            url: url,
+            dataType: "html"
+        });
+    }
+
+    @if (TempData["Message"] != null)
+    {
+        var values = (string[]) TempData["Message"];
         <text>
         (function ($) {
             $(function () {
@@ -299,7 +281,7 @@
             });
         })(jQuery);
         </text>
-}
-    </script>
+    }
+</script>
 </body>
 </html>

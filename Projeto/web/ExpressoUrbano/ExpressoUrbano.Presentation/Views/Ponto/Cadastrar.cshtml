@@ -7,20 +7,20 @@
 <h2>Cadastrar Ponto</h2>
 
 <div class="col-md-8">
-    @using (Html.BeginForm("Cadastrar", "Ponto", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    @using (Html.BeginForm("Cadastrar", "Ponto", FormMethod.Post, new {@class = "form-horizontal", role = "form"}))
     {
         @Html.AntiForgeryToken()
         @Html.Partial("_CreateOrEdit", Model)
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" class="btn btn-default" value="Cadastrar" />
-                <input type="button" onclick="new function () {location.href='Gerenciar'};" class="btn btn-default" value="Cancelar" />
+                <input type="submit" class="btn btn-default" value="Cadastrar"/>
+                <input type="button" onclick=" new function() { location.href = 'Gerenciar' }; " class="btn btn-default" value="Cancelar"/>
             </div>
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                @Html.ValidationSummary("", new { @class = "text-danger" })
+                @Html.ValidationSummary("", new {@class = "text-danger"})
             </div>
         </div>
     }

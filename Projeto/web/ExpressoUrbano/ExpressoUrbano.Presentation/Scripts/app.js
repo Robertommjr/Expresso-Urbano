@@ -1,0 +1,1 @@
+﻿var app = angular.module('app', ['ngTouch', 'ui.grid', 'ui.grid.resizeColumns', 'ui.grid.grouping', 'ui.grid.selection', 'ui.grid.moveColumns', 'ui.grid.exporter', 'ui.grid.edit', 'ui.grid.pagination', 'ui.grid.autoResize']);

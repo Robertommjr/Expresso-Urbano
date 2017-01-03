@@ -1,15 +1,12 @@
 ﻿using System.Web.Mvc;
 
-namespace Voluntariado.Apresentacao.MVC.Areas.Admin
+namespace ExpressoUrbano.Presentation.Areas.Admin
 {
     public class AdminAreaRegistration : AreaRegistration
     {
         public override string AreaName
         {
-            get
-            {
-                return "Admin";
-            }
+            get { return "Admin"; }
         }
 
         public override void RegisterArea(AreaRegistrationContext context)
@@ -17,9 +14,9 @@ namespace Voluntariado.Apresentacao.MVC.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { controller = "Index", action = "Index", id = UrlParameter.Optional },
-                namespaces: new[] { "Voluntariado.Apresentacao.MVC.Areas.Admin.Controllers" }
-            );
+                new {controller = "Index", action = "Index", id = UrlParameter.Optional},
+                new[] {"ExpressoUrbano.Presentation.Areas.Admin.Controllers"}
+                );
         }
     }
 }

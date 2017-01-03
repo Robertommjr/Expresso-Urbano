@@ -1,10 +1,7 @@
-﻿
-using System.IO;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using AutoMapper;
 
-
-namespace Voluntariado.Apresentacao.MVC.Areas.Admin.Controllers
+namespace ExpressoUrbano.Presentation.Areas.Admin.Controllers
 {
     public class MapController : Controller
     {
@@ -15,25 +12,5 @@ namespace Voluntariado.Apresentacao.MVC.Areas.Admin.Controllers
         {
             return RedirectToAction("Gerenciar");
         }
-
-        public byte[] Upload(string filefield = "file", bool edicao = false)
-            {
-            var myFile = Request.Files[filefield];
-            byte[] fileData = null;
-            if (myFile != null && myFile.ContentLength != 0)
-            {
-                using (var binaryReader = new BinaryReader(myFile.InputStream))
-                {
-                    fileData = binaryReader.ReadBytes(myFile.ContentLength);
-                }
-            }
-            else if (!edicao)
-            {
-                fileData = System.IO.File.ReadAllBytes(Server.MapPath("~/Content/img/img_padrao.jpg"));
-            }
-            return fileData;
-        }
     }
-
-
 }

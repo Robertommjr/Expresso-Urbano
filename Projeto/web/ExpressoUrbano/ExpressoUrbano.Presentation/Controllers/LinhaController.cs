@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using ExpressoUrbano.Presentation.Models.Linha;
 
 namespace ExpressoUrbano.Presentation.Controllers
@@ -12,7 +8,6 @@ namespace ExpressoUrbano.Presentation.Controllers
         [HttpGet]
         public ActionResult Gerenciar()
         {
-
             return View();
         }
 
@@ -21,14 +16,13 @@ namespace ExpressoUrbano.Presentation.Controllers
         {
             return View();
         }
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Cadastrar(LinhaViewModel linhaViewModel)
         {
             if (ModelState.IsValid)
             {
-
             }
 
             return View(linhaViewModel);
@@ -45,9 +39,8 @@ namespace ExpressoUrbano.Presentation.Controllers
         {
             if (ModelState.IsValid)
             {
-                
             }
-            
+
             return PartialView("PartialGrid");
         }
 
@@ -56,18 +49,16 @@ namespace ExpressoUrbano.Presentation.Controllers
         {
             return View();
         }
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Editar(LinhaViewModel linhaViewModel)
         {
             if (ModelState.IsValid)
             {
-
             }
 
             return View(linhaViewModel);
         }
-
     }
 }

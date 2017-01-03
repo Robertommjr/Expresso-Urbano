@@ -21,7 +21,7 @@
 /*global document: false, jQuery: false */
 
 (function ($) {
-    var $jQval = $.validator,
+    var $Qval = $.validator,
         adapters,
         data_validation = "unobtrusiveValidation";
 
@@ -127,7 +127,7 @@
         var $form = $(form),
             result = $form.data(data_validation),
             onResetProxy = $.proxy(onReset, form),
-            defaultOptions = $jQval.unobtrusive.options || {},
+            defaultOptions = $Qval.unobtrusive.options || {},
             execInContext = function (name, args) {
                 var func = defaultOptions[name];
                 func && $.isFunction(func) && func.apply(form, args);
@@ -170,7 +170,7 @@
         return result;
     }
 
-    $jQval.unobtrusive = {
+    $Qval.unobtrusive = {
         adapters: [],
 
         parseElement: function (element, skipAttach) {
@@ -242,7 +242,7 @@
                                   .has("[data-val=true]");
 
             $selector.find("[data-val=true]").each(function () {
-                $jQval.unobtrusive.parseElement(this, true);
+                $Qval.unobtrusive.parseElement(this, true);
             });
 
             $forms.each(function () {
@@ -254,7 +254,7 @@
         }
     };
 
-    adapters = $jQval.unobtrusive.adapters;
+    adapters = $Qval.unobtrusive.adapters;
 
     adapters.add = function (adapterName, params, fn) {
         /// <summary>Adds a new adapter to convert unobtrusive HTML into a jQuery Validate validation.</summary>
@@ -335,11 +335,11 @@
         });
     };
 
-    $jQval.addMethod("__dummy__", function (value, element, params) {
+    $Qval.addMethod("__dummy__", function (value, element, params) {
         return true;
     });
 
-    $jQval.addMethod("regex", function (value, element, params) {
+    $Qval.addMethod("regex", function (value, element, params) {
         var match;
         if (this.optional(element)) {
             return true;
@@ -349,7 +349,7 @@
         return (match && (match.index === 0) && (match[0].length === value.length));
     });
 
-    $jQval.addMethod("nonalphamin", function (value, element, nonalphamin) {
+    $Qval.addMethod("nonalphamin", function (value, element, nonalphamin) {
         var match;
         if (nonalphamin) {
             match = value.match(/\W/g);
@@ -358,7 +358,7 @@
         return match;
     });
 
-    if ($jQval.methods.extension) {
+    if ($Qval.methods.extension) {
         adapters.addSingleVal("accept", "mimtype");
         adapters.addSingleVal("extension", "extension");
     } else {
@@ -424,6 +424,6 @@
     });
 
     $(function () {
-        $jQval.unobtrusive.parse(document);
+        $Qval.unobtrusive.parse(document);
     });
 }(jQuery));
